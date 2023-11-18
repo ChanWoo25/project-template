@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.11)
 
-set(PACKAGE_NAME CMAKE_GROUND)
+set(PACKAGE_NAME SLAM_GROUND)
 set(PACKAGE_VERSION 1.1.0)
 
 project(${PACKAGE_NAME} VERSION ${PACKAGE_VERSION} LANGUAGES CXX)
@@ -9,73 +9,74 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "" FORCE)
+set(CMAKE_BUILD_TYPE "Release")
 
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
+# set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+# set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+# include(CPack)
 
-message(STATUS "")
-# TUTORIAL START ###################################################################################
-message(STATUS "CMAKE_CXX_STANDARD: ${CMAKE_CXX_STANDARD}")
-message(STATUS "CMAKE_CXX_STANDARD_REQUIRED: ${CMAKE_CXX_STANDARD_REQUIRED}")
-message(STATUS "CMAKE_CXX_EXTENSIONS: ${CMAKE_CXX_EXTENSIONS}\n")
-####################################################################################################
-message(STATUS "CMAKE_BUILD_TOOL: ${CMAKE_BUILD_TOOL}")
-message(STATUS "CMAKE_GENERATOR: ${CMAKE_GENERATOR}")
-message(STATUS "CMAKE_MAKE_PROGRAM: ${CMAKE_MAKE_PROGRAM}\n")
-####################################################################################################
-message(STATUS "CMAKE_COMMAND: ${CMAKE_COMMAND}")
-message(STATUS "CMAKE_VERSION: ${CMAKE_VERSION}")
-message(STATUS "CMAKE_MAJOR_VERSION: ${CMAKE_MAJOR_VERSION}")
-message(STATUS "CMAKE_MINOR_VERSION: ${CMAKE_MINOR_VERSION}")
-message(STATUS "CMAKE_PATCH_VERSION: ${CMAKE_PATCH_VERSION}")
-message(STATUS "CMAKE_MINIMUM_REQUIRED_VERSION: ${CMAKE_MINIMUM_REQUIRED_VERSION}\n")
-####################################################################################################
-message(STATUS "CMAKE_SOURCE_DIR: ${CMAKE_SOURCE_DIR}")
-message(STATUS "CMAKE_BINARY_DIR: ${CMAKE_BINARY_DIR}")
-message(STATUS "CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
-message(STATUS "CMAKE_CURRENT_BINARY_DIR: ${CMAKE_CURRENT_BINARY_DIR}\n")
-####################################################################################################
-message(STATUS "CMAKE_PARENT_LIST_FILE: ${CMAKE_PARENT_LIST_FILE}")
-message(STATUS "CMAKE_CURRENT_LIST_DIR: ${CMAKE_CURRENT_LIST_DIR}")
-message(STATUS "CMAKE_CURRENT_LIST_FILE: ${CMAKE_CURRENT_LIST_FILE}")
-message(STATUS "CMAKE_CURRENT_LIST_LINE: ${CMAKE_CURRENT_LIST_LINE}\n")
-####################################################################################################
-message(STATUS "CMAKE_PROJECT_DESCRIPTION: ${CMAKE_PROJECT_DESCRIPTION}")
-message(STATUS "CMAKE_PROJECT_HOMEPAGE_URL: ${CMAKE_PROJECT_HOMEPAGE_URL}")
-message(STATUS "CMAKE_PROJECT_NAME: ${CMAKE_PROJECT_NAME}")
-message(STATUS "CMAKE_PROJECT_VERSION: ${CMAKE_PROJECT_VERSION}")
-message(STATUS "CMAKE_PROJECT_VERSION_MAJOR: ${CMAKE_PROJECT_VERSION_MAJOR}")
-message(STATUS "CMAKE_PROJECT_VERSION_MINOR: ${CMAKE_PROJECT_VERSION_MINOR}")
-message(STATUS "CMAKE_PROJECT_VERSION_PATCH: ${CMAKE_PROJECT_VERSION_PATCH}")
-message(STATUS "CMAKE_RANLIB: ${CMAKE_RANLIB}")
-message(STATUS "CMAKE_ROOT: ${CMAKE_ROOT}")
-message(STATUS "CMAKE_RULE_MESSAGES: ${CMAKE_RULE_MESSAGES}")
-message(STATUS "CMAKE_SCRIPT_MODE_FILE: ${CMAKE_SCRIPT_MODE_FILE}")
-message(STATUS "CMAKE_SKIP_RPATH: ${CMAKE_SKIP_RPATH}")
-message(STATUS "CMAKE_TOOLCHAIN_FILE: ${CMAKE_TOOLCHAIN_FILE}")
-message(STATUS "CMAKE_VERBOSE_MAKEFILE: ${CMAKE_VERBOSE_MAKEFILE}\n")
-####################################################################################################
-message(STATUS "PROJECT_NAME: ${PROJECT_NAME}")
-message(STATUS "${PROJECT_NAME}_SOURCE_DIR: ${${PROJECT_NAME}_SOURCE_DIR}")
-message(STATUS "${PROJECT_NAME}_BINARY_DIR: ${${PROJECT_NAME}_BINARY_DIR}")
-message(STATUS "${PROJECT_NAME}_DESCRIPTION: ${${PROJECT_NAME}_DESCRIPTION}")
-message(STATUS "${PROJECT_NAME}_HOMEPAGE_URL: ${${PROJECT_NAME}_HOMEPAGE_URL}")
-message(STATUS "${PROJECT_NAME}_IS_TOP_LEVEL: ${${PROJECT_NAME}_IS_TOP_LEVEL}")
-message(STATUS "${PROJECT_NAME}_VERSION: ${${PROJECT_NAME}_VERSION}")
-message(STATUS "${PROJECT_NAME}_VERSION_MAJOR: ${${PROJECT_NAME}_VERSION_MAJOR}")
-message(STATUS "${PROJECT_NAME}_VERSION_MINOR: ${${PROJECT_NAME}_VERSION_MINOR}")
-message(STATUS "${PROJECT_NAME}_VERSION_PATCH: ${${PROJECT_NAME}_VERSION_PATCH}")
-message(STATUS "PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
-message(STATUS "PROJECT_BINARY_DIR: ${PROJECT_BINARY_DIR}")
-message(STATUS "PROJECT_DESCRIPTION: ${PROJECT_DESCRIPTION}")
-message(STATUS "PROJECT_HOMEPAGE_URL: ${PROJECT_HOMEPAGE_URL}")
-message(STATUS "PROJECT_IS_TOP_LEVEL: ${PROJECT_IS_TOP_LEVEL}")
-message(STATUS "PROJECT_VERSION: ${PROJECT_VERSION}")
-message(STATUS "PROJECT_VERSION_MAJOR: ${PROJECT_VERSION_MAJOR}")
-message(STATUS "PROJECT_VERSION_MINOR: ${PROJECT_VERSION_MINOR}")
-message(STATUS "PROJECT_VERSION_PATCH: ${PROJECT_VERSION_PATCH}\n")
-# TUTORIAL END #####################################################################################
+# message(STATUS "In Main CMakeLists.txt")
+# # TUTORIAL START ###################################################################################
+# message(STATUS "CMAKE_CXX_STANDARD: ${CMAKE_CXX_STANDARD}")
+# message(STATUS "CMAKE_CXX_STANDARD_REQUIRED: ${CMAKE_CXX_STANDARD_REQUIRED}")
+# message(STATUS "CMAKE_CXX_EXTENSIONS: ${CMAKE_CXX_EXTENSIONS}\n")
+# ####################################################################################################
+# message(STATUS "CMAKE_BUILD_TOOL: ${CMAKE_BUILD_TOOL}")
+# message(STATUS "CMAKE_GENERATOR: ${CMAKE_GENERATOR}")
+# message(STATUS "CMAKE_MAKE_PROGRAM: ${CMAKE_MAKE_PROGRAM}\n")
+# ####################################################################################################
+# message(STATUS "CMAKE_COMMAND: ${CMAKE_COMMAND}")
+# message(STATUS "CMAKE_VERSION: ${CMAKE_VERSION}")
+# message(STATUS "CMAKE_MAJOR_VERSION: ${CMAKE_MAJOR_VERSION}")
+# message(STATUS "CMAKE_MINOR_VERSION: ${CMAKE_MINOR_VERSION}")
+# message(STATUS "CMAKE_PATCH_VERSION: ${CMAKE_PATCH_VERSION}")
+# message(STATUS "CMAKE_MINIMUM_REQUIRED_VERSION: ${CMAKE_MINIMUM_REQUIRED_VERSION}\n")
+# ####################################################################################################
+# message(STATUS "CMAKE_SOURCE_DIR: ${CMAKE_SOURCE_DIR}")
+# message(STATUS "CMAKE_BINARY_DIR: ${CMAKE_BINARY_DIR}")
+# message(STATUS "CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
+# message(STATUS "CMAKE_CURRENT_BINARY_DIR: ${CMAKE_CURRENT_BINARY_DIR}\n")
+# ####################################################################################################
+# message(STATUS "CMAKE_PARENT_LIST_FILE: ${CMAKE_PARENT_LIST_FILE}")
+# message(STATUS "CMAKE_CURRENT_LIST_DIR: ${CMAKE_CURRENT_LIST_DIR}")
+# message(STATUS "CMAKE_CURRENT_LIST_FILE: ${CMAKE_CURRENT_LIST_FILE}")
+# message(STATUS "CMAKE_CURRENT_LIST_LINE: ${CMAKE_CURRENT_LIST_LINE}\n")
+# ####################################################################################################
+# message(STATUS "CMAKE_PROJECT_DESCRIPTION: ${CMAKE_PROJECT_DESCRIPTION}")
+# message(STATUS "CMAKE_PROJECT_HOMEPAGE_URL: ${CMAKE_PROJECT_HOMEPAGE_URL}")
+# message(STATUS "CMAKE_PROJECT_NAME: ${CMAKE_PROJECT_NAME}")
+# message(STATUS "CMAKE_PROJECT_VERSION: ${CMAKE_PROJECT_VERSION}")
+# message(STATUS "CMAKE_PROJECT_VERSION_MAJOR: ${CMAKE_PROJECT_VERSION_MAJOR}")
+# message(STATUS "CMAKE_PROJECT_VERSION_MINOR: ${CMAKE_PROJECT_VERSION_MINOR}")
+# message(STATUS "CMAKE_PROJECT_VERSION_PATCH: ${CMAKE_PROJECT_VERSION_PATCH}")
+# message(STATUS "CMAKE_RANLIB: ${CMAKE_RANLIB}")
+# message(STATUS "CMAKE_ROOT: ${CMAKE_ROOT}")
+# message(STATUS "CMAKE_RULE_MESSAGES: ${CMAKE_RULE_MESSAGES}")
+# message(STATUS "CMAKE_SCRIPT_MODE_FILE: ${CMAKE_SCRIPT_MODE_FILE}")
+# message(STATUS "CMAKE_SKIP_RPATH: ${CMAKE_SKIP_RPATH}")
+# message(STATUS "CMAKE_TOOLCHAIN_FILE: ${CMAKE_TOOLCHAIN_FILE}")
+# message(STATUS "CMAKE_VERBOSE_MAKEFILE: ${CMAKE_VERBOSE_MAKEFILE}\n")
+# ####################################################################################################
+# message(STATUS "PROJECT_NAME: ${PROJECT_NAME}")
+# message(STATUS "${PROJECT_NAME}_SOURCE_DIR: ${${PROJECT_NAME}_SOURCE_DIR}")
+# message(STATUS "${PROJECT_NAME}_BINARY_DIR: ${${PROJECT_NAME}_BINARY_DIR}")
+# message(STATUS "${PROJECT_NAME}_DESCRIPTION: ${${PROJECT_NAME}_DESCRIPTION}")
+# message(STATUS "${PROJECT_NAME}_HOMEPAGE_URL: ${${PROJECT_NAME}_HOMEPAGE_URL}")
+# message(STATUS "${PROJECT_NAME}_IS_TOP_LEVEL: ${${PROJECT_NAME}_IS_TOP_LEVEL}")
+# message(STATUS "${PROJECT_NAME}_VERSION: ${${PROJECT_NAME}_VERSION}")
+# message(STATUS "${PROJECT_NAME}_VERSION_MAJOR: ${${PROJECT_NAME}_VERSION_MAJOR}")
+# message(STATUS "${PROJECT_NAME}_VERSION_MINOR: ${${PROJECT_NAME}_VERSION_MINOR}")
+# message(STATUS "${PROJECT_NAME}_VERSION_PATCH: ${${PROJECT_NAME}_VERSION_PATCH}")
+# message(STATUS "PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
+# message(STATUS "PROJECT_BINARY_DIR: ${PROJECT_BINARY_DIR}")
+# message(STATUS "PROJECT_DESCRIPTION: ${PROJECT_DESCRIPTION}")
+# message(STATUS "PROJECT_HOMEPAGE_URL: ${PROJECT_HOMEPAGE_URL}")
+# message(STATUS "PROJECT_IS_TOP_LEVEL: ${PROJECT_IS_TOP_LEVEL}")
+# message(STATUS "PROJECT_VERSION: ${PROJECT_VERSION}")
+# message(STATUS "PROJECT_VERSION_MAJOR: ${PROJECT_VERSION_MAJOR}")
+# message(STATUS "PROJECT_VERSION_MINOR: ${PROJECT_VERSION_MINOR}")
+# message(STATUS "PROJECT_VERSION_PATCH: ${PROJECT_VERSION_PATCH}\n")
+# # TUTORIAL END #####################################################################################
 
 set(${PACKAGE_NAME}_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 set(${PACKAGE_NAME}_SOURCE_PATH "${${PACKAGE_NAME}_PATH}/src")
@@ -98,9 +99,45 @@ message(STATUS "${PACKAGE_NAME}_THIRDPARTY_PATH: ${${PACKAGE_NAME}_THIRDPARTY_PA
 add_subdirectory(${${PACKAGE_NAME}_THIRDPARTY_PATH})
 add_subdirectory(${${PACKAGE_NAME}_MODULE_PATH})
 
+## Find Eigen3
+find_package(Eigen3 3.3 REQUIRED)
+message(STATUS "Found eigen3 version is ${EIGEN3_VERSION_STRING}")
+
+## Find OpenCV
+find_package(OpenCV 4.2 REQUIRED)
+if(OpenCV_FOUND)
+  message(STATUS "OPENCV_VERSION: ${OpenCV_VERSION}")
+  message(STATUS "OPENCV_INCLUDE_DIRS: ${OpenCV_INCLUDE_DIRS}")
+  # message(STATUS "Found OpenCV libraries is ${OpenCV_LIBS}")
+endif()
+
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GLOG REQUIRED libglog)
+if (GLOG_FOUND)
+  message(STATUS "Found glog.")
+  message(STATUS "* Version: ${GLOG_VERSION}")
+  message(STATUS "* Libs: ${GLOG_LIBRARIES}")
+  message(STATUS "* Ex: target_link_libraries(example PRIVATE glog::glog)")
+endif()
+pkg_check_modules(GFLAGS REQUIRED gflags)
+if (GFLAGS_FOUND)
+  message(STATUS "Found gflags.")
+  message(STATUS "GFLAGS_VERSION: ${GFLAGS_VERSION}")
+  message(STATUS "* Version: ${GFLAGS_VERSION}")
+  message(STATUS "* Libs: ${GFLAGS_LIBRARIES}")
+endif()
+
+set(spdlog_DIR ${CMAKE_BINARY_DIR}/thirdparty/spdlog/install/${CMAKE_BUILD_TYPE}/lib/cmake/spdlog)
+message(STATUS "spdlog_DIR: ${spdlog_DIR}")
+find_package(spdlog REQUIRED PATHS ${spdlog_DIR})
+
+
 add_executable(MAIN src/main.cpp)
 target_link_libraries(MAIN
   CMAKE_GROUND_EXAMPLE
+  glog
+  gflags
+  spdlog::spdlog
 )
 target_compile_options(MAIN PRIVATE
   -Wall -Wextra -Wpedantic -Werror
