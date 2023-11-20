@@ -99,10 +99,6 @@ message(STATUS "${PACKAGE_NAME}_THIRDPARTY_PATH: ${${PACKAGE_NAME}_THIRDPARTY_PA
 add_subdirectory(${${PACKAGE_NAME}_THIRDPARTY_PATH})
 add_subdirectory(${${PACKAGE_NAME}_MODULE_PATH})
 
-## Find Eigen3
-find_package(Eigen3 3.3 REQUIRED)
-message(STATUS "Found eigen3 version is ${EIGEN3_VERSION_STRING}")
-
 ## Find OpenCV
 find_package(OpenCV 4.2 REQUIRED)
 if(OpenCV_FOUND)
@@ -112,6 +108,7 @@ if(OpenCV_FOUND)
 endif()
 
 find_package(PkgConfig REQUIRED)
+
 pkg_check_modules(GLOG REQUIRED libglog)
 if (GLOG_FOUND)
   message(STATUS "Found glog.")
@@ -119,6 +116,7 @@ if (GLOG_FOUND)
   message(STATUS "* Libs: ${GLOG_LIBRARIES}")
   message(STATUS "* Ex: target_link_libraries(example PRIVATE glog::glog)")
 endif()
+
 pkg_check_modules(GFLAGS REQUIRED gflags)
 if (GFLAGS_FOUND)
   message(STATUS "Found gflags.")
@@ -126,6 +124,15 @@ if (GFLAGS_FOUND)
   message(STATUS "* Version: ${GFLAGS_VERSION}")
   message(STATUS "* Libs: ${GFLAGS_LIBRARIES}")
 endif()
+
+pkg_check_modules(EIGEN3 REQUIRED eigen3)
+if (EIGEN3_FOUND)
+  message(STATUS "Found eigen3.")
+  message(STATUS "* Version: ${EIGEN3_VERSION}")
+  message(STATUS "* Header: ${EIGEN3_INCLUDE_DIRS}")
+  message(STATUS "* Tip: Just target_include_directories(example $<EIGEN3_INCLUDE_DIRS> )")
+endif()
+
 
 set(spdlog_DIR ${CMAKE_BINARY_DIR}/thirdparty/spdlog/install/${CMAKE_BUILD_TYPE}/lib/cmake/spdlog)
 message(STATUS "spdlog_DIR: ${spdlog_DIR}")

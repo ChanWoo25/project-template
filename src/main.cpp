@@ -1,11 +1,8 @@
-// Copyright (c) 2023 HolyGround, All Rights Reserved.
-// Authors: EunSung Yang
-
-
 #include "example/utils.hpp"
 
 #include <gflags/gflags.h>
 #include <glog/logging.h>
+#include <spdlog/common.h>
 #include <spdlog/spdlog.h>
 
 #include <cstdint>
@@ -39,6 +36,17 @@ auto main(int argc, char * argv[]) -> int32_t
   spdlog::info("var_double: {}", FLAGS_var_double);
   spdlog::info("var_string: {}", FLAGS_var_string);
 
+  spdlog::set_level(spdlog::level::trace);
+  spdlog::trace("trace level is {}", spdlog::level::trace);
+  spdlog::debug("debug level is {}", spdlog::level::debug);
+  spdlog::info("info level is {}", spdlog::level::info);
+  spdlog::set_pattern("[%H:%M:%S %z] [%n] [%^---%L---%$] [thread %t] %v");
+
+  spdlog::error("error level is {}", spdlog::level::err);
+  spdlog::warn("warn level is {}", spdlog::level::warn);
+  spdlog::critical("critical level is {}", spdlog::level::critical);
+
+  // TODO: Setting spdlog custom logger & Test YamlParser using yaml-cpp library
 
   holyground::example::Print("Hello World!");
   return 0;
