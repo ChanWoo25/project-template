@@ -1,11 +1,16 @@
 # Computer Vision Project Template
 
-This repository provide a template project for computer vision project. The following libraries' installation script or auto-install function is included in this repository.
+## Description
 
-- OpenCV
-- pcl
-- spdlog & fmt for logging
-- Pangolin
+This repository provide a template project for on-the-fly computer vision project template. The following libraries' installation script or auto-install function is included in this repository. This project will be updated consistenlty.
+
+*For Now*, The following utility packages will be automatically installed and linked to your project when you build.
+
+> The util libraries have been carefully selected. They promptly update issues and strive to minimize dependencies on other libraries. And I strongly recommend to get used to utilize them. :)
+
+- [spdlog (+fmt)](https://github.com/gabime/spdlog)
+- [yaml-cpp](https://github.com/jbeder/yaml-cpp)
+- [argparse](https://github.com/p-ranav/argparse)
 
 ## Auto-install frequently used libraries
 
