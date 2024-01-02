@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository provide a template project for on-the-fly computer vision project template. The following libraries' installation script or auto-install function is included in this repository. This project will be updated consistenlty.
+ This repository provides on-the-fly computer vision project template. Installation script for frequently used computer vision libraries and well-constructed utility libraries are included. Will be updated consistenlty.
 
 *For Now*, The following utility packages will be automatically installed and linked to your project when you build.
 
